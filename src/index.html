@@ -1,1 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Henry James Ros</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="gradient-bg text-white">
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- NAV -->
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between glass">
+      <h1 class="font-bold">HJ</h1>
+
+      <div class="space-x-6 text-sm">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button onclick="toggleTheme()">🌙</button>
+      </div>
+    </nav>
+
+    <!-- HERO WITH LOCAL VIDEO -->
+    <section
+      class="relative h-screen flex items-center justify-center text-center overflow-hidden"
+    >
+      <!-- Video Background -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute w-full h-full object-cover"
+      >
+        <source src="assets/videos/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 fade">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6">Henry James Ros</h1>
+        <p class="text-gray-300 text-xl mb-8">
+          Programmer • Video Editor • Graphic Designer
+        </p>
+
+        <a
+          href="#projects"
+          class="px-6 py-3 glass rounded-full hover:bg-white hover:text-black transition"
+        >
+          View Work
+        </a>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-32">
+      <h2 class="text-4xl mb-16 fade">Projects</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="glass p-6 rounded-2xl fade">
+          <h3 class="text-xl mb-3">💻 Programming</h3>
+          <p class="text-gray-400">Web apps and systems</p>
+        </div>
+
+        <div class="glass p-6 rounded-2xl fade">
+          <h3 class="text-xl mb-3">🎬 Video Editing</h3>
+
+          <!-- LOCAL VIDEO -->
+          <video controls class="rounded-lg mt-4">
+            <source src="assets/videos/lightning.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="glass p-6 rounded-2xl fade">
+          <h3 class="text-xl mb-3">🎨 Graphic Design</h3>
+          <img src="assets/images/sample.jpg" class="rounded-lg mt-4" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX SECTION -->
+    <section class="h-[60vh] flex items-center justify-center">
+      <h2 class="text-5xl font-bold parallax" id="parallaxText">
+        Creativity meets Code
+      </h2>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="text-center py-32 fade">
+      <h2 class="text-3xl mb-6">Contact</h2>
+      <a
+        href="mailto:you@email.com"
+        class="px-6 py-3 glass rounded-full hover:bg-white hover:text-black transition"
+      >
+        Email Me
+      </a>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="script.js"></script>
+  </body>
+</html>
